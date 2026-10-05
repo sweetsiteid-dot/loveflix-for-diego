@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>LOVEFLIX | 2nd Mensiversary</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+</head>
+
+
+<body>
+
+
+<!-- ========================= -->
+<!-- AUDIO -->
+<!-- ========================= -->
+
+<audio id="bgMusic" loop>
+
+    <source
+        src="shapeofmyheart.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+
+<!-- ========================= -->
+<!-- LOADING SCREEN -->
+<!-- ========================= -->
+
+<div id="loadingScreen">
+
+    <div class="netflix-logo">
+        LOVEFLIX
+    </div>
+
+    <p>
+        Loading Our Story...
+    </p>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- PIN SCREEN -->
+<!-- ========================= -->
+
+<div
+    id="pinScreen"
+    class="hidden"
+>
+
+    <div class="pin-box">
+
+        <h2>
+            Our Story 🔐
+        </h2>
+
+        <p>
+            Enter Access Code
+        </p>
+
+        <input
+            type="password"
+            id="pinInput"
+            maxlength="4"
+            placeholder="••••"
+        >
+
+        <button onclick="checkPin()">
+            Continue ❤️
+        </button>
+
+        <span id="pinError"></span>
+
+    </div>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- PROFILE SELECTION -->
+<!-- ========================= -->
+
+<div
+    id="profileScreen"
+    class="hidden"
+>
+
+    <h1>
+        Who's Watching?
+    </h1>
+
+    <div class="profiles">
+
+        <div
+            class="profile-card"
+            onclick="enterLoveflix()"
+        >
+
+            <img
+                src="foto1.jpg"
+                alt="Diego"
+            >
+
+            <p>
+                Diego ❤️
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- MAIN APP -->
+<!-- ========================= -->
+
+<div
+    id="mainApp"
+    class="hidden"
+>
+
+
+
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
+
+<nav>
+
+    <div class="logo">
+        LOVEFLIX
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="#hero">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="#continue">
+                Memories
+            </a>
+        </li>
+
+        <li>
+            <a href="#letter">
+                Our Letter
+            </a>
+        </li>
+
+        <li>
+            <a href="#quiz">
+                Quiz
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- ========================= -->
+<!-- HERO SECTION -->
+<!-- ========================= -->
+
+<section
+    id="hero"
+    class="hero"
+    style="background-image:url('foto1.jpg');"
+>
+
+    <div class="overlay"></div>
+
+
+    <div class="hero-content">
+
+        <span class="badge">
+            2ND MENSIVERSARY
+        </span>
+
+
+        <h1>
+            HAPPY 2ND
+            MENSIVERSARY,
+            DIEGO ❤️
+        </h1>
+
+
+        <h3>
+            Our Story • Episode 02
+        </h3>
+
+
+        <p>
+            Two months,
+            countless memories,
+            and one person
+            I still choose every day.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <button
+                class="play-btn"
+                onclick="playStory()"
+            >
+                ▶ Play Our Story
+            </button>
+
+
+            <button
+                class="info-btn"
+                onclick="scrollToSection('continue')"
+            >
+                More Memories
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Hidden Heart #1 -->
+
+    <div
+        class="hidden-heart"
+        onclick="collectHeart(this)"
+    >
+        ❤️
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- CONTINUE WATCHING -->
+<!-- ========================= -->
+
+<section
+    id="continue"
+    class="section"
+>
+
+    <h2>
+        Continue Watching 💗
+    </h2>
+
+
+    <div class="movie-row">
+
+
+
+        <div class="movie-card">
+
+            <img
+                src="foto2.jpg"
+                alt="Memory 01"
+            >
+
+            <div class="movie-info">
+
+                <h3>
+                    My Favorite Person
+                </h3>
+
+                <p>
+                    Episode 01
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="movie-card">
+
+            <img
+                src="foto3.jpg"
+                alt="Memory 02"
+            >
+
+            <div class="movie-info">
+
+                <h3>
+                    The Boy I Love
+                </h3>
+
+                <p>
+                    Episode 02
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="movie-card">
+
+            <img
+                src="foto4.jpg"
+                alt="Memory 03"
+            >
+
+            <div class="movie-info">
+
+                <h3>
+                    My Safe Place
+                </h3>
+
+                <p>
+                    Episode 03
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="movie-card">
+
+            <img
+                src="foto5.jpg"
+                alt="Memory 04"
+            >
+
+            <div class="movie-info">
+
+                <h3>
+                    Us, Always
+                </h3>
+
+                <p>
+                    Episode 04
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- PHOTO GALLERY -->
+<!-- ========================= -->
+
+<section class="section">
+
+    <h2>
+        Top Picks For My Favorite Person 😻
+    </h2>
+
+
+    <div class="grid-gallery">
+
+
+        <div class="poster">
+            <img
+                src="foto6.jpg"
+                alt="Memory 05"
+            >
+        </div>
+
+
+        <div class="poster">
+            <img
+                src="foto7.jpg"
+                alt="Memory 06"
+            >
+        </div>
+
+
+        <div class="poster">
+            <img
+                src="foto8.jpg"
+                alt="Memory 07"
+            >
+        </div>
+
+
+        <div class="poster">
+            <img
+                src="foto9.jpg"
+                alt="Memory 08"
+            >
+        </div>
+
+
+        <div class="poster">
+            <img
+                src="foto10.jpg"
+                alt="Memory 09"
+            >
+        </div>
+
+
+        <div class="poster">
+            <img
+                src="foto11.jpg"
+                alt="Memory 10"
+            >
+        </div>
+
+
+        <div class="poster">
+            <img
+                src="foto12.jpg"
+                alt="Memory 11"
+            >
+        </div>
+
+
+        <div class="poster">
+            <img
+                src="foto13.jpg"
+                alt="Memory 12"
+            >
+        </div>
+
+
+        <div class="poster">
+            <img
+                src="foto14.jpg"
+                alt="Memory 13"
+            >
+        </div>
+
+
+        <div class="poster">
+            <img
+                src="foto15.jpg"
+                alt="Memory 14"
+            >
+        </div>
+
+
+        <div class="poster">
+            <img
+                src="foto16.jpg"
+                alt="Memory 15"
+            >
+        </div>
+
+
+        <div class="poster">
+
+            <img
+                src="foto1.jpg"
+                alt="Memory 16"
+            >
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- LOVE LETTER -->
+<!-- ========================= -->
+
+<section
+    id="letter"
+    class="section"
+>
+
+    <h2>
+        Exclusive Mensiversary Episode 💌
+    </h2>
+
+
+    <div class="letter-box">
+
+        <h3>
+            Episode 02:
+            Happy 2nd Mensiversary ❤️
+        </h3>
+
+
+        <p>
+
+            Happy 2nd mensiversary ya pacarkuu,
+            ga kerasa ya waktu berjalan secepet ini
+            sampai kita tiba lagi di tanggal ini.
+            Aku cuma mau bilang kalau aku bersyukur
+            bangett ada kamu yang nemenin hari-hari
+            aku selama ini dig :3
+
+            <br><br>
+
+
+            Jujur nihh kamu pacarku yang paling mantep,
+            paling ngangenin, dan paaaling aku sayangg.
+            Mau gimanapun kamu tetep aja
+            ujung-ujungnya aku sayang lagi.
+
+            <br><br>
+
+
+            Kamu selalu bisa bikin aku senyum dan ketawa
+            sama tingkah laku mu yang kadang juga
+            tengilnya minta ampunn.
+            Apalagi kalo lagi mode manja,
+            heyy pacarku ya ini??
+            Lucuu banget.
+
+            <br><br>
+
+
+            Jadi rasanya kayak gabisa absen gitu aja,
+            seharian gaada kabar dari kamu
+            bikin aku khawatir lho.
+            Jangan capek buat saling tukar kabar
+            dan cerita sama aku yaa🙂‍↕️
+
+            <br><br>
+
+
+            Makasihh udah mau belajar bareng
+            buat saling memahami,
+            dan bertahan sampai detik ini dig
+            walau kita pasti punya tantangan
+            masing-masing.
+
+            <br><br>
+
+
+            Aku berharap di kemudian hari,
+            kita makin kuat,
+            makin kompak,
+            makin terbuka satu sama lain,
+            dan bisa terus saling dukung
+            buat jadi versi terbaik dari diri kita sendirii.
+
+            <br><br>
+
+
+            Aku enggak sabar buat bikin lebih banyak
+            memori indah,
+            ketawa bareng lagi,
+            dan tumbuh bareng kamu.
+
+            <br><br>
+
+
+            I’m really, truly glad
+            I have you in my life.
+
+            <br><br>
+
+
+            Happy monthly anniversary,
+            diego! ❤️
+
+        </p>
+
+    </div>
+
+
+
+    <!-- Hidden Heart #2 -->
+
+    <div
+        class="hidden-heart letter-heart"
+        onclick="collectHeart(this)"
+    >
+        ❤️
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- ACHIEVEMENT SYSTEM -->
+<!-- ========================= -->
+
+<section class="section">
+
+    <h2>
+        Our Little Achievements 🏆
+    </h2>
+
+
+    <div class="achievement-box">
+
+
+        <div
+            class="achievement"
+            id="ach1"
+        >
+            ⬜ First Login
+        </div>
+
+
+        <div
+            class="achievement"
+            id="ach2"
+        >
+            ⬜ Read Our Letter
+        </div>
+
+
+        <div
+            class="achievement"
+            id="ach3"
+        >
+            ⬜ Couple Quiz Master
+        </div>
+
+
+        <div
+            class="achievement"
+            id="ach4"
+        >
+            ⬜ Memory Hunter
+        </div>
+
+
+        <div
+            class="achievement"
+            id="ach5"
+        >
+            ⬜ Hidden Heart Finder
+        </div>
+
+
+        <div
+            class="achievement"
+            id="ach6"
+        >
+            ⬜ Secret Episode
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- MEMORY MATCH GAME -->
+<!-- ========================= -->
+
+<section
+    id="memoryGame"
+    class="section"
+>
+
+    <h2>
+        Our Memory Match 💞
+    </h2>
+
+
+    <p class="game-desc">
+        Match all the memories
+        to unlock something special.
+    </p>
+
+
+    <div class="memory-grid">
+
+
+        <div
+            class="memory-card"
+            data-card="1"
+        >
+
+            <div class="front">
+                ?
+            </div>
+
+            <div class="back">
+                ❤️
+            </div>
+
+        </div>
+
+
+
+        <div
+            class="memory-card"
+            data-card="1"
+        >
+
+            <div class="front">
+                ?
+            </div>
+
+            <div class="back">
+                ❤️
+            </div>
+
+        </div>
+
+
+
+        <div
+            class="memory-card"
+            data-card="2"
+        >
+
+            <div class="front">
+                ?
+            </div>
+
+            <div class="back">
+                🫰
+            </div>
+
+        </div>
+
+
+
+        <div
+            class="memory-card"
+            data-card="2"
+        >
+
+            <div class="front">
+                ?
+            </div>
+
+            <div class="back">
+                🫰
+            </div>
+
+        </div>
+
+
+
+        <div
+            class="memory-card"
+            data-card="3"
+        >
+
+            <div class="front">
+                ?
+            </div>
+
+            <div class="back">
+                🥰
+            </div>
+
+        </div>
+
+
+
+        <div
+            class="memory-card"
+            data-card="3"
+        >
+
+            <div class="front">
+                ?
+            </div>
+
+            <div class="back">
+                🥰
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div id="memoryResult"></div>
+
+
+
+    <!-- Hidden Heart #3 -->
+
+    <div
+        class="hidden-heart game-heart"
+        onclick="collectHeart(this)"
+    >
+        ❤️
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- SECRET EPISODE -->
+<!-- ========================= -->
+
+<section
+    class="section"
+    id="secretEpisode"
+>
+
+    <h2>
+        Secret Episode 🔐
+    </h2>
+
+
+    <div class="secret-lock">
+
+        <p>
+            Collect all hidden hearts
+            to unlock this little secret.
+        </p>
+
+
+        <button
+            id="unlockBtn"
+            disabled
+        >
+            Locked 🔒
+        </button>
+
+    </div>
+
+
+
+    <div
+        id="secretContent"
+        class="hidden"
+    >
+
+        <img
+            src="foto16.jpg"
+            class="secret-photo"
+            alt="Our Secret Memory"
+        >
+
+
+        <h3>
+            A Little Secret About You 🫰
+        </h3>
+
+
+        <p>
+
+            Mau tau ga fakta menarik?
+            ya itu faktanya kamu menarik🫰
+
+            <br><br>
+
+
+            kamu itu kayak bagian kecil dari hari aku
+            yang ternyata punya arti besar banget dig.
+            kadang cuma ngobrol sebentar sama kamu aja
+            udah cukup buat bikin aku seneng
+
+            <br><br>
+
+
+            dan kalau boleh egois sedikit,
+            aku masih pengen jadi orang
+            yang bisa bilang
+            “aku sayang kamu”
+            ke kamu berkali-kali,
+            setiap hari,
+            sampai kamu bosen dengernya.
+
+            <br><br>
+
+
+            i love you more than you know,
+            sayanggg❤️
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- QUIZ SECTION -->
+<!-- ========================= -->
+
+<section
+    id="quiz"
+    class="section"
+>
+
+    <h2>
+        Diego Quiz 💗
+    </h2>
+
+
+    <div class="quiz-box">
+
+        <h3>
+            Siapa yang paling aku sayang?
+        </h3>
+
+
+        <button onclick="correctAnswer()">
+            Diego ❤️
+        </button>
+
+
+        <button onclick="wrongAnswer()">
+            Shawn
+        </button>
+
+
+        <button onclick="wrongAnswer()">
+            Kucing Tetangga 😭
+        </button>
+
+
+        <div id="quizResult"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- SEASON COMPLETION -->
+<!-- ========================= -->
+
+<section
+    id="seasonComplete"
+    class="section"
+>
+
+    <h2>
+        Our Story Progress
+    </h2>
+
+
+    <div class="season-box">
+
+
+        <div class="progress-bar">
+
+            <div
+                id="seasonProgress"
+                class="progress-fill"
+            >
+            </div>
+
+        </div>
+
+
+        <p id="progressText">
+            0 / 6 Achievements Completed
+        </p>
+
+
+        <div id="seasonBadge">
+
+            💗 Our Story Loading...
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Hidden Heart #4 -->
+
+    <div
+        class="hidden-heart season-heart"
+        onclick="collectHeart(this)"
+    >
+        ❤️
+    </div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- ENDING CREDITS -->
+<!-- ========================= -->
+
+<section
+    id="credits"
+    class="credits-section"
+>
+
+
+    <div class="credits-wrapper">
+
+
+        <h1>
+            LOVEFLIX
+        </h1>
+
+
+        <p>
+            A 2nd Mensiversary Special
+        </p>
+
+
+        <br>
+
+
+        <p>
+            From
+        </p>
+
+
+        <h2>
+            Shawn ❤️
+        </h2>
+
+
+        <br>
+
+
+        <p>
+            Starring
+        </p>
+
+
+        <h2>
+            Diego ❤️
+        </h2>
+
+
+        <br>
+
+
+        <p>
+            Season
+        </p>
+
+
+        <h2>
+            02
+        </h2>
+
+
+        <br>
+
+
+        <p>
+            Release Date
+        </p>
+
+
+        <h2>
+            05
+        </h2>
+
+
+        <br>
+
+
+        <p>
+            Genre
+        </p>
+
+
+        <h2>
+            Romance • Comedy • Forever
+        </h2>
+
+
+        <br><br>
+
+
+        <h1>
+            Thank You For Watching
+        </h1>
+
+
+        <h2>
+            Our Story ❤️
+        </h2>
+
+
+    </div>
+
+
+
+    <!-- Hidden Heart #5 -->
+
+    <div
+        class="hidden-heart credits-heart"
+        onclick="collectHeart(this)"
+    >
+        ❤️
+    </div>
+
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- FINAL SCREEN -->
+<!-- ========================= -->
+
+<section
+    class="final-screen"
+>
+
+    <div class="final-card">
+
+
+        <h1>
+            🎬 Ready For Another Episode?
+        </h1>
+
+
+        <p>
+            This story isn't over yet.
+            There are still so many memories,
+            laughs, random conversations,
+            and moments waiting for us.
+        </p>
+
+
+        <button
+            onclick="renewSeason()"
+            class="renew-btn"
+        >
+            YES ❤️
+        </button>
+
+
+        <div id="renewMessage"></div>
+
+
+    </div>
+
+</section>
+
+
+
+</div>
+<!-- END MAIN APP -->
+
+
+
+<!-- ========================= -->
+<!-- CONFETTI -->
+<!-- ========================= -->
+
+<div
+    id="confettiContainer"
+>
+</div>
+
+
+
+<!-- ========================= -->
+<!-- FLOATING HEARTS -->
+<!-- ========================= -->
+
+<div class="floating-hearts">
+
+    <span>❤️</span>
+
+    <span>🫰</span>
+
+    <span>❤️</span>
+
+    <span>💗</span>
+
+    <span>🥰</span>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- POPUP ACHIEVEMENT -->
+<!-- ========================= -->
+
+<div
+    id="achievementPopup"
+    class="achievement-popup"
+>
+
+    🏆 Achievement Unlocked!
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- SUCCESS SCREEN -->
+<!-- ========================= -->
+
+<div
+    id="seasonUnlocked"
+    class="season-unlocked hidden"
+>
+
+
+    <div class="unlock-box">
+
+
+        <h1>
+            💗 OUR STORY COMPLETED
+        </h1>
+
+
+        <p>
+
+            You found all the little pieces
+            hidden inside this story.
+
+            <br><br>
+
+            But don't worry...
+
+            <br><br>
+
+            Our story is still going.
+
+        </p>
+
+
+        <h3>
+            Happy 2nd Mensiversary,
+            Diego ❤️
+        </h3>
+
+
+        <button onclick="closeSeasonUnlocked()">
+            Continue
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+    <p>
+        Made with ❤️ by Shawn
+    </p>
+
+</footer>
+
+
+
+<!-- ========================= -->
+<!-- SCRIPT -->
+<!-- ========================= -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+          </html>
